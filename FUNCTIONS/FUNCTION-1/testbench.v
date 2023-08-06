@@ -16,5 +16,6 @@ module funtest; // Test bench module
     #1 A1 = 1'b1; B1 = 1'b1; C1 = 1'b0; // Change inputs after 1 more time unit
     #1 A1 = 1'b1; B1 = 1'b1; C1 = 1'b1; // Change inputs after 1 more time unit
     #1 A1 = 1'b1; B1 = 1'b0; C1 = 1'b0; // Change inputs after 1 more time unit
+    #1 A1 = 1'b1; B1 = 1'b0; C1 = 1'b0; // Change inputs after 1 more time unit
   end
 endmodule
