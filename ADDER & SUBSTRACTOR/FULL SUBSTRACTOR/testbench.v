@@ -15,5 +15,6 @@ module fullsubtest; // Test bench module
     #1 a[2] = 1'b1; a[1] = 1'b0; a[0] = 1'b1; // Change input a to 101 after 1 more time unit
     #1 a[2] = 1'b1; a[1] = 1'b1; a[0] = 1'b0; // Change input a to 110 after 1 more time unit
     #1 a[2] = 1'b1; a[1] = 1'b1; a[0] = 1'b1; // Change input a to 111 after 1 more time unit
+    #1 a[2] = 1'b0; a[1] = 1'b0; a[0] = 1'b0; // Change input a to 111 after 1 more time unit
   end
 endmodule
