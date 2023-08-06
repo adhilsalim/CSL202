@@ -5,6 +5,6 @@ module fun(A, B, C, F);
   output F;      // Output port F
 
   // Function F = a'b'c + abc' + a'bc' + abc
-  assign F = ((~A & ~B & ~C) | (A & B & ~C) |
+  assign F = ((~A & ~B & C) | (A & B & ~C) |
              (~A & B & ~C) | (A & B & C));
 endmodule
