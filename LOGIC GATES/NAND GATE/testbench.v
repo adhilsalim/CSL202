@@ -11,5 +11,6 @@ module nandtest; // Test bench module
     #1 a = 1'b0; b = 1'b1; // Change inputs a and b after 1 time unit
     #1 a = 1'b1; b = 1'b0; // Change inputs a and b after 1 more time unit
     #1 a = 1'b1; b = 1'b1; // Change inputs a and b after 1 more time unit
+    #1 a = 1'b1; b = 1'b1; // Change inputs a and b after 1 more time unit
   end
 endmodule
