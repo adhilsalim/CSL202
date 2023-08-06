@@ -28,5 +28,6 @@ module tb_fullAdd; // Test bench module
     Data_in_A = 1; Data_in_B = 0; Data_in_C = 1; #100;
     Data_in_A = 1; Data_in_B = 1; Data_in_C = 0; #100;
     Data_in_A = 1; Data_in_B = 1; Data_in_C = 1; #100;
+    Data_in_A = 0; Data_in_B = 0; Data_in_C = 0; #100;
   end
 endmodule
