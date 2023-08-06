@@ -7,7 +7,7 @@ module fullsubtest; // Test bench module
   fullsub fs(d, b, a); // Instantiate the full subtractor module
 
   initial begin
-    a[2] = 1'b0; a[1] = 1'b0; a[0] = 1'b0; // Set input a to 000
+      a[2] = 1'b0; a[1] = 1'b0; a[0] = 1'b0; // Set input a to 000
     #1 a[2] = 1'b0; a[1] = 1'b0; a[0] = 1'b1; // Change input a to 001 after 1 time unit
     #1 a[2] = 1'b0; a[1] = 1'b1; a[0] = 1'b0; // Change input a to 010 after 1 more time unit
     #1 a[2] = 1'b0; a[1] = 1'b1; a[0] = 1'b1; // Change input a to 011 after 1 more time unit
