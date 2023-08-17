@@ -8,9 +8,11 @@ module ortest; // Test bench module
 
   initial begin
     a = 1'b0; b = 1'b0; // Initialize inputs a and b to 0
+
     #1 a = 1'b0; b = 1'b1; // Change inputs a and b after 1 time unit
     #1 a = 1'b1; b = 1'b0; // Change inputs a and b after 1 more time unit
     #1 a = 1'b1; b = 1'b1; // Change inputs a and b after 1 more time unit
-    #1 a = 1'b1; b = 1'b1; // Change inputs a and b after 1 more time unit
+
+    #1 a = 1'b1; b = 1'b1; // to get the last output in the waveform, value doesn't matter
   end
 endmodule

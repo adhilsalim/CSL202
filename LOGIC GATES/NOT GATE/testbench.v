@@ -8,7 +8,9 @@ module nottest; // Test bench module
 
   initial begin
     a = 1'b0; // Initialize input a to 0
+
     #1 a = 1'b1; // Change input a to 1 after 1 time unit
-    #1 a = 1'bx; // Change input a to 'x' after 1 more time unit
+    
+    #1 a = 1'bx; // x means unknown, ie. don't care
   end
 endmodule
