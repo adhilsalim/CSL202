@@ -5,16 +5,17 @@ module testadder; // Test bench module
   wire s1, co1;   // Declare test bench outputs as wires
 
   fulladder f1(.a(a1), .b(b1), .cin(c1), .sum(s1), .cout(co1)); // Instantiate the full adder module
-
+  // variables in parenthesis are ports of the module
+  // variables outside parenthesis are signals
   initial begin
-    a1 = 1'b0; b1 = 1'b0; c1 = 1'b0; // Set inputs a1, b1, c1 to 0, 1, 0
-    #1 a1 = 1'b0; b1 = 1'b0; c1 = 1'b1; // Change inputs to 1, 1, 0 after 1 time unit1
-    #1 a1 = 1'b0; b1 = 1'b1; c1 = 1'b0; // Change inputs to 1, 1, 1 after 1 more time unit
-    #1 a1 = 1'b0; b1 = 1'b1; c1 = 1'b1; // Change inputs to 0, 0, 0 after 1 more time unit
-    #1 a1 = 1'b1; b1 = 1'b0; c1 = 1'b0; // Change inputs to 1, 1, 0 after 1 time unit
-    #1 a1 = 1'b1; b1 = 1'b0; c1 = 1'b1; // Change inputs to 1, 1, 1 after 1 more time unit
-    #1 a1 = 1'b1; b1 = 1'b1; c1 = 1'b0; // Change inputs to 0, 0, 0 after 1 more time unit
-    #1 a1 = 1'b1; b1 = 1'b1; c1 = 1'b1; // Change inputs to 0, 0, 0 after 1 more time unit
-    #1 a1 = 1'b0; b1 = 1'b0; c1 = 1'b0; // Change inputs to 0, 0, 0 after 1 more time unit
+    a1 = 1'b0; b1 = 1'b0; c1 = 1'b0; // set input to 000
+    #1 a1 = 1'b0; b1 = 1'b0; c1 = 1'b1; // 001
+    #1 a1 = 1'b0; b1 = 1'b1; c1 = 1'b0; // 010
+    #1 a1 = 1'b0; b1 = 1'b1; c1 = 1'b1; // 011
+    #1 a1 = 1'b1; b1 = 1'b0; c1 = 1'b0; // 100
+    #1 a1 = 1'b1; b1 = 1'b0; c1 = 1'b1; // 101
+    #1 a1 = 1'b1; b1 = 1'b1; c1 = 1'b0; // 110
+    #1 a1 = 1'b1; b1 = 1'b1; c1 = 1'b1; // 111
+    #1 a1 = 1'b0; b1 = 1'b0; c1 = 1'b0; // to get 111 in waveform. value of a1, b1, c1 does not matter
   end
 endmodule

@@ -8,27 +8,41 @@ module combinationalckt_tb(); // Test bench module
   initial begin
     tb_a = 1'b0;
     tb_b = 1'b0;
+
     tb_a1 = 1'b0;
     tb_b1 = 1'b0;
-    #10
+
+    #10 // Wait for 10 time units
+
     tb_a = 1'b0;
     tb_b = 1'b1;
+
     tb_a1 = 1'b0;
     tb_b1 = 1'b1;
-    #10
+
+    #10 // Wait for 10 time units
+
     tb_a = 1'b1;
     tb_b = 1'b0;
+
     tb_a1 = 1'b1;
     tb_b1 = 1'b0;
-    #10
+
+    #10 // Wait for 10 time units
+
     tb_a = 1'b1;
     tb_b = 1'b1;
+
     tb_a1 = 1'b1;
     tb_b1 = 1'b1;
-    #10
+
+    #10 // Wait for 10 time units
+
     tb_a = 1'b0;
     tb_b = 1'b0;
+
     tb_a1 = 1'b0;
     tb_b1 = 1'b0;
+    
   end
 endmodule
