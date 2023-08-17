@@ -19,7 +19,7 @@ module full_adder(din_A, din_B, din_cin, dout_sum, dout_carry);
   half_adder ha1(.din_A(din_A), .din_B(din_B),.dout_sum(ha1_sum), .dout_carry(ha1_carry));
 
   // Instantiate the half adder 2
-  half_adder ha2(.din_A(ha1_carry), .din_B(din_cin), .dout_sum(dout_sum), .dout_carry(ha2_carry));
+  half_adder ha2(.din_A(ha1_sum), .din_B(din_cin), .dout_sum(ha1_sum), .dout_carry(ha2_carry));
 
   assign dout_sum = ha2_sum;
   assign dout_carry = ha1_carry | ha2_carry;
