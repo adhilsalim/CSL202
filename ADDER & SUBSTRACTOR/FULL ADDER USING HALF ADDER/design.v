@@ -1,36 +1,26 @@
-module half_adder(Data_in_A, Data_in_B, Data_out_Sum, Data_out_Carry);
-  input Data_in_A;
-  input Data_in_B;
-  output Data_out_Sum;
-  output Data_out_Carry;
+// HALF ADDER
+module half_adder(din_A, din_B, dout_sum, dout_carry);
+  input din_A, din_B;
+  output dout_sum, dout_carry;
 
-  // Implement the Sum and Carry equations using Verilog Bit operators.
-  assign Data_out_Sum = Data_in_A ^ Data_in_B;       // XOR operation
-  assign Data_out_Carry = Data_in_A & Data_in_B;    // AND operation
+  assign dout_sum = din_A ^ din_B;
+  assign dout_carry = din_A & din_B;
 endmodule
 
-module full_adder(Data_in_A, Data_in_B, Data_in_C, Data_out_Sum, Data_out_Carry);
-  input Data_in_A;
-  input Data_in_B;
-  input Data_in_C;
-  output Data_out_Sum;
-  output Data_out_Carry;
+// FULL ADDER
+module full_adder(din_A, din_B, din_cin, dout_sum, dout_carry);
+  input din_A, din_B, din_cin;
+  output dout_sum, dout_carry;
 
   // Internal variables
-  wire ha1_sum;
-  wire ha2_sum;
-  wire ha1_carry;
-  wire ha2_carry;
+  wire ha1_sum, ha1_carry, ha2_sum, ha2_carry;
 
   // Instantiate the half adder 1
-  half_adder ha1(.Data_in_A(Data_in_A), .Data_in_B(Data_in_B), .Data_out_Sum(ha1_sum), .Data_out_Carry(ha1_carry));
+  half_adder ha1(.din_A(din_A), .din_B(din_B),.dout_sum(ha1_sum), .dout_carry(ha1_carry));
 
   // Instantiate the half adder 2
-  half_adder ha2(.Data_in_A(Data_in_C), .Data_in_B(ha1_sum), .Data_out_Sum(ha2_sum), .Data_out_Carry(ha2_carry));
+  half_adder ha2(.din_A(ha1_carry), .din_B(din_cin), .dout_sum(dout_sum), .dout_carry(ha2_carry));
 
-  // Sum output from the 2nd half adder is connected to full adder output
-  assign Data_out_Sum = ha2_sum;
-
-  // The carries from both the half adders are OR'ed to get the final carry.
-  assign Data_out_Carry = ha1_carry | ha2_carry;
+  assign dout_sum = ha2_sum;
+  assign dout_carry = ha1_carry | ha2_carry;
 endmodule
