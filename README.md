@@ -56,3 +56,6 @@ This repository is licensed under the MIT License. Please refer to the LICENSE f
 ### Contact
 
 For any questions or feedback, please feel free to open an issue on the GitHub repository.
+
+> [!IMPORTANT]  
+> This repository is intended for educational purposes only. The provided programs may be incomplete or contain errors. Use them at your own risk and discretion.
