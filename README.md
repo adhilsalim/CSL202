@@ -4,9 +4,9 @@ This repository contains the programs and resources developed during the CSL202 
 
 **Contributors:**
 
-- Adhil Salim (github.com/adhilsalim)
-- Advaith Manoj (github.com/Advaith-dev)
-- Aaron Samuel Mathew (github.com/AaronSMathew)
+- [Adhil Salim]() (github.com/adhilsalim)
+- [Advaith Manoj]() (github.com/Advaith-dev)
+- [Aaron Samuel Mathew]() (github.com/AaronSMathew)
 
 ### Purpose
 
